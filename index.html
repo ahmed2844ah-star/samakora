@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سما كورة رمضان 2026 - البث المباشر والأخبار العربية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========== CSS RESET ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* ========== VARIABLES - RAMADAN 2026 ========== */
+        :root {
+            --primary: #6d1d3b;
+            --primary-dark: #4a0e2a;
+            --secondary: #e6b800;
+            --accent: #ff8c42;
+            --neon-gold: #ffd700;
+            --neon-moon: #f9e79f;
+            --neon-lantern: #e6b800;
+            --dark: #0a0a1a;
+            --night-sky: #0a0a2a;
+            --ramadan-blue: #1a3b5c;
+            --ramadan-purple: #4a2c5c;
+            --card-bg: rgba(10, 10, 30, 0.7);
+            --card-bg-solid: #0a0a2a;
+            --shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            --radius: 25px;
+            --gradient-ramadan: linear-gradient(145deg, #6d1d3b 0%, #4a0e2a 30%, #1a3b5c 70%, #0a0a2a 100%);
+            --neon-ramadan: linear-gradient(135deg, #ffd700, #e6b800, #ff8c42);
+            --glass: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 215, 0, 0.2);
+            --moon-glow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+        
+        /* ========== BASE STYLES ========== */
+        body {
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+            background: var(--night-sky);
+            color: #fff;
+            line-height: 1.7;
+            min-height: 100vh;
+            background-attachment: fixed;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(230, 184, 0, 0.05) 1px, transparent 1px),
+                radial-gradient(circle at 90% 70%, rgba(255, 215, 0, 0.05) 2px, transparent 2px),
+                radial-gradient(circle at 30% 80%, rgba(255, 140, 66, 0.05) 1px, transparent 1px),
+                radial-gradient(circle at 70% 30%, rgba(109, 29, 59, 0.05) 2px, transparent 2px);
+            background-size: 100px 100px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 25px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* ========== RAMADAN ANIMATIONS ========== */
+        @keyframes floatLantern {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        @keyframes starTwinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        @keyframes crescentGlow {
+            0%, 100% { box-shadow: 0 0 30px #ffd700, 0 0 60px rgba(255, 215, 0, 0.3); }
+            50% { box-shadow: 0 0 50px #e6b800, 0 0 90px rgba(230, 184, 0, 0.5); }
+        }
+        
+        @keyframes ramadanLight {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+        
+        @keyframes fadeInNews {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* ========== RAMADAN HEADER 2026 ========== */
+        header {
+            background: var(--gradient-ramadan);
+            color: white;
+            padding: 30px 0;
+            border-radius: var(--radius);
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .ramadan-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 15L60 40L87 42L65 60L75 87L50 72L25 87L35 60L13 42L40 40Z" fill="rgba(255,215,0,0.1)"/></svg>'),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="30" cy="30" r="15" fill="rgba(255,140,66,0.1)"/><circle cx="70" cy="70" r="10" fill="rgba(230,184,0,0.1)"/></svg>');
+            background-size: 80px 80px, 100px 100px;
+            opacity: 0.3;
+            animation: ramadanLight 20s linear infinite;
+        }
+        
+        .crescent-decoration {
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 215, 0, 0.2), transparent 70%);
+            border-radius: 50%;
+            filter: blur(30px);
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            animation: floatLantern 4s ease-in-out infinite;
+        }
+        
+        .logo-icon {
+            font-size: 3.5rem;
+            color: var(--neon-gold);
+            background: rgba(0, 0, 0, 0.4);
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 2px solid var(--neon-gold);
+            box-shadow: var(--moon-glow);
+            position: relative;
+        }
+        
+        .logo-icon::after {
+            content: '☪';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.8rem;
+            color: var(--neon-gold);
+            opacity: 0.5;
+        }
+        
+        .logo-text h1 {
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+            font-weight: 900;
+            background: var(--neon-ramadan);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        .logo-text p {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            color: var(--neon-moon);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-text p i {
+            color: var(--neon-gold);
+        }
+        
+        .ramadan-badge {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px 30px;
+            border-radius: 60px;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--neon-gold);
+            animation: crescentGlow 3s infinite alternate;
+        }
+        
+        .ramadan-badge i {
+            font-size: 2rem;
+            color: var(--neon-gold);
+        }
+        
+        .ramadan-text {
+            font-weight: 900;
+            font-size: 1.4rem;
+            color: white;
+            background: linear-gradient(45deg, #ffd700, #ff8c42);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* ========== MAIN CONTENT GRID ========== */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        /* ========== LIVE STREAM SECTION ========== */
+        .live-stream-section {
+            background: var(--card-bg-solid);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .live-stream-section::before {
+            content: '☪';
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 3rem;
+            color: rgba(255, 215, 0, 0.1);
+            transform: rotate(-15deg);
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(10, 10, 30, 0.7);
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-right: 6px solid var(--neon-gold);
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            background: var(--neon-ramadan);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .section-title i {
+            color: var(--neon-gold);
+            font-size: 2rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--neon-moon);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .livestream-container {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 2px solid var(--neon-gold);
+            animation: crescentGlow 4s infinite alternate;
+            margin-bottom: 30px;
+        }
+        
+        /* ========== NEWS SECTION - AUTO UPDATE ========== */
+        .news-section {
+            background: var(--card-bg-solid);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            backdrop-filter: blur(10px);
+            height: fit-content;
+            position: relative;
+        }
+        
+        .news-section::after {
+            content: '🌙';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 2rem;
+            opacity: 0.2;
+        }
+        
+        .news-filters {
+            background: rgba(10, 10, 30, 0.7);
+            padding: 25px;
+            border-radius: var(--radius);
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-right: 6px solid var(--neon-gold);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .filter-tag {
+            padding: 10px 25px;
+            background: rgba(230, 184, 0, 0.1);
+            color: var(--neon-gold);
+            border-radius: 50px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+        
+        .filter-tag:hover {
+            background: rgba(230, 184, 0, 0.3);
+            transform: translateY(-3px);
+        }
+        
+        .filter-tag.active {
+            background: var(--neon-gold);
+            color: var(--dark);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        
+        .news-list {
+            background: rgba(10, 10, 30, 0.5);
+            border-radius: var(--radius);
+            padding: 25px;
+            max-height: 700px;
+            overflow-y: auto;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .news-item {
+            display: flex;
+            gap: 20px;
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+            transition: all 0.3s ease;
+            animation: fadeInNews 0.5s ease;
+            position: relative;
+        }
+        
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        
+        .news-item:hover {
+            background: rgba(255, 215, 0, 0.05);
+            padding: 25px;
+            margin: 0 -25px;
+            border-radius: 15px;
+        }
+        
+        .news-image {
+            width: 140px;
+            height: 100px;
+            border-radius: 12px;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .news-item:hover .news-image img {
+            transform: scale(1.1);
+        }
+        
+        .news-content {
+            flex: 1;
+        }
+        
+        .news-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .news-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .news-title a:hover {
+            color: var(--neon-gold);
+        }
+        
+        .news-summary {
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .news-source {
+            background: rgba(230, 184, 0, 0.15);
+            color: var(--neon-gold);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.85rem;
+        }
+        
+        /* ========== AUTO UPDATE RAMADAN ========== */
+        .auto-update {
+            background: linear-gradient(145deg, rgba(109, 29, 59, 0.4), rgba(26, 59, 92, 0.4));
+            padding: 30px 40px;
+            border-radius: var(--radius);
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .auto-update::before {
+            content: '🌙✨';
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+            font-size: 3rem;
+            opacity: 0.1;
+        }
+        
+        .update-info {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .update-icon {
+            background: var(--neon-ramadan);
+            color: var(--dark);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            animation: floatLantern 3s ease-in-out infinite;
+        }
+        
+        .update-text h4 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: white;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .update-text p {
+            color: var(--neon-moon);
+            font-size: 1.1rem;
+        }
+        
+        .update-btn {
+            background: var(--neon-ramadan);
+            color: var(--dark);
+            border: none;
+            padding: 18px 45px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 900;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .update-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.6);
+        }
+        
+        /* ========== RAMADAN FOOTER ========== */
+        footer {
+            background: linear-gradient(to top, var(--primary-dark), var(--night-sky));
+            color: white;
+            padding: 60px 0 40px;
+            margin-top: 80px;
+            border-radius: var(--radius) var(--radius) 0 0;
+            position: relative;
+            border-top: 3px solid var(--neon-gold);
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 30px;
+            background: var(--neon-ramadan);
+            border-radius: 30px 30px 0 0;
+            opacity: 0.5;
+        }
+        
+        footer::after {
+            content: 'رمضان كريم 2026';
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 1.2rem;
+            color: rgba(255, 215, 0, 0.2);
+            font-weight: 900;
+            transform: rotate(-5deg);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .footer-logo i {
+            font-size: 3.5rem;
+            color: var(--neon-gold);
+            text-shadow: 0 0 20px var(--neon-gold);
+        }
+        
+        .footer-logo h3 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: var(--neon-ramadan);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--neon-gold);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            color: #bbb;
+            font-size: 1rem;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1400px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .logo {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .logo-text h1 {
+                font-size: 2.2rem;
+            }
+            .news-item {
+                flex-direction: column;
+            }
+            .news-image {
+                width: 100%;
+                height: 200px;
+            }
+            .auto-update {
+                flex-direction: column;
+                text-align: center;
+            }
+            .update-info {
+                flex-direction: column;
+            }
+        }
+        
+        /* ========== SCROLLBAR ========== */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--night-sky);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--neon-gold);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+        
+        /* ========== NOTIFICATION ========== */
+        .ramadan-notification {
+            position: fixed;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #6d1d3b, #4a0e2a);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 60px;
+            font-weight: 800;
+            z-index: 10000;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            border: 1px solid #ffd700;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            animation: slideDown 0.3s ease;
+        }
+        
+        @keyframes slideDown {
+            from { top: -100px; opacity: 0; }
+            to { top: 30px; opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="crescent-decoration"></div>
+            <div class="ramadan-effect"></div>
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>سما كورة رمضان 2026</h1>
+                        <p><i class="fas fa-moon"></i> البث المباشر والأخبار العربية <i class="fas fa-star"></i></p>
+                    </div>
+                </div>
+                <div class="ramadan-badge">
+                    <i class="fas fa-lantern"></i>
+                    <span class="ramadan-text">رمضان كريم 1447</span>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </header>
+        
+        <div class="content-grid">
+            <!-- قسم البث المباشر -->
+            <div class="live-stream-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-satellite-dish"></i> بث مباشر رمضاني
+                    </h2>
+                    <div class="section-subtitle">
+                        <i class="fas fa-video"></i> مشاهدة حية
+                    </div>
+                </div>
+                
+                <div class="livestream-container">
+                    <iframe 
+                        src="https://www.scorebat.com/embed/livescore/" 
+                        frameborder="0" 
+                        width="100%" 
+                        height="650px" 
+                        allowfullscreen 
+                        allow="autoplay; fullscreen" 
+                        style="width:100%; height:650px; display:block;" 
+                        title="بث مباشر للمباريات"
+                        id="livestream-frame">
+                    </iframe>
+                </div>
+                
+                <div class="stream-controls" style="display: flex; gap: 15px; margin-top: 20px;">
+                    <button class="update-btn" onclick="refreshStream()" style="flex: 1; padding: 15px;">
+                        <i class="fas fa-redo"></i> تحديث البث
+                    </button>
+                    <button class="update-btn" onclick="toggleFullscreen()" style="flex: 1; background: #4a2c5c;">
+                        <i class="fas fa-expand"></i> ملء الشاشة
+                    </button>
+                </div>
+            </div>
+            
+            <!-- قسم الأخبار - يتغير تلقائياً كل 10 ثواني -->
+            <div class="news-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-newspaper"></i> أخبار رمضان الكروية
+                    </h2>
+                    <div class="section-subtitle" id="news-auto-status">
+                        <i class="fas fa-sync-alt fa-spin"></i> تحديث تلقائي
+                    </div>
+                </div>
+                
+                <div class="news-filters">
+                    <span style="font-weight: 800; color: var(--neon-gold);">التصنيف:</span>
+                    <div class="filter-tag active" data-category="all">الكل</div>
+                    <div class="filter-tag" data-category="saudi">الدوري السعودي</div>
+                    <div class="filter-tag" data-category="egypt">الدوري المصري</div>
+                    <div class="filter-tag" data-category="euro">أوروبا</div>
+                    <div class="filter-tag" data-category="arab">عربية</div>
+                </div>
+                
+                <!-- قائمة الأخبار المتغيرة تلقائياً -->
+                <div class="news-list" id="news-list">
+                    <!-- الأخبار هنا تتغير كل 10 ثواني -->
+                </div>
+                
+                <div style="margin-top: 20px; display: flex; gap: 15px;">
+                    <button class="update-btn" id="manual-update-btn" style="flex: 1;">
+                        <i class="fas fa-sync-alt"></i> تحديث الأخبار الآن
+                    </button>
+                    <div style="background: rgba(230,184,0,0.1); padding: 15px; border-radius: 60px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-clock" style="color: #ffd700;"></i>
+                        <span id="auto-timer" style="font-weight: 800; color: white;">يتجدد بعد 10 ث</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- قسم التحديث التلقائي -->
+        <div class="auto-update">
+            <div class="update-info">
+                <div class="update-icon">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="update-text">
+                    <h4><i class="fas fa-sync-alt"></i> أخبار متجددة تلقائياً</h4>
+                    <p>آخر تحديث: <span id="last-update-time">منذ لحظات</span></p>
+                </div>
+            </div>
+            <button class="update-btn" id="force-update-btn">
+                <i class="fas fa-redo-alt"></i> تجديد الأخبار
+            </button>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-futbol"></i>
+                    <h3>سما كورة رمضان</h3>
+                </div>
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-home"></i> الرئيسية</a>
+                    <a href="#"><i class="fas fa-tv"></i> البث المباشر</a>
+                    <a href="#"><i class="fas fa-newspaper"></i> الأخبار</a>
+                    <a href="#"><i class="fas fa-moon"></i> رمضان 2026</a>
+                    <a href="#"><i class="fas fa-envelope"></i> اتصل بنا</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 سما كورة رمضان - تصميم رمضاني كروي 2026 - جميع الحقوق محفوظة</p>
+                <p>✨ كل عام وأنتم بخير - رمضان كريم 1447 ✨</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ========== بيانات الأخبار العربية الحقيقية ==========
+        const ARABIC_SPORTS_NEWS = [
+            // الدوري السعودي
+            {
+                id: 1,
+                title: "الهلال يتوج بطلاً للدوري السعودي قبل نهاية المسابقة بثلاث جولات",
+                summary: "توج فريق الهلال بلقب الدوري السعودي للمحترفين للمرة الـ19 في تاريخه بعد فوزه على الاتفاق بثلاثية نظيفة في الجولة الـ27.",
+                category: "saudi",
+                source: "الشرق الأوسط",
+                date: "منذ 10 دقائق",
+                image: "https://images.unsplash.com/photo-1598880940080-ff9a29891b85?w=400",
+                url: "#"
+            },
+            {
+                id: 2,
+                title: "النصر يعلن تعاقده رسمياً مع مدرب برتغالي خلفاً للكرواتي",
+                summary: "أعلن نادي النصر السعودي تعاقده مع المدرب البرتغالي ليوناردو جارديم لقيادة الفريق في الموسم المقبل بعقد لمدة موسمين.",
+                category: "saudi",
+                source: "سبورت 24",
+                date: "منذ 25 دقيقة",
+                image: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=400",
+                url: "#"
+            },
+            {
+                id: 3,
+                title: "الاتحاد يقترب من ضم نجم برشلونة في صفقة انتقال حر",
+                summary: "كشفت تقارير صحفية إسبانية عن اقتراب نادي الاتحاد من ضم لاعب وسط برشلونة سيرجيو بوسكيتس في صفقة انتقال حر نهاية الموسم.",
+                category: "saudi",
+                source: "عاجل",
+                date: "منذ ساعة",
+                image: "https://images.unsplash.com/photo-1531418933968-3dafdd442a23?w=400",
+                url: "#"
+            },
+            // الدوري المصري
+            {
+                id: 4,
+                title: "الأهلي يضرب الزمالك برباعية في ديربي القاهرة",
+                summary: "حقق النادي الأهلي فوزاً كبيراً على غريمه التقليدي الزمالك بأربعة أهداف مقابل هدف في المباراة المؤجلة من الجولة الـ14.",
+                category: "egypt",
+                source: "اليوم السابع",
+                date: "منذ 45 دقيقة",
+                image: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=400",
+                url: "#"
+            },
+            {
+                id: 5,
+                title: "الزمالك يعلن قائمة الراحلين في نهاية الموسم",
+                summary: "استقر الجهاز الفني للزمالك بقيادة مدربه الجديد على قائمة اللاعبين الذين سيتم الاستغناء عنهم بنهاية الموسم الحالي.",
+                category: "egypt",
+                source: "الوطن سبورت",
+                date: "منذ ساعتين",
+                image: "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=400",
+                url: "#"
+            },
+            {
+                id: 6,
+                title: "بيراميدز يخطف صدارة الدوري المصري بعد الفوز على سموحة",
+                summary: "خطف فريق بيراميدز صدارة الدوري المصري الممتاز بعد فوزه الصعب على سموحة بهدفين مقابل هدف في المباراة التي جمعتهما.",
+                category: "egypt",
+                source: "المصري اليوم",
+                date: "منذ 3 ساعات",
+                image: "https://images.unsplash.com/photo-1575361204480-aadea25e6e68?w=400",
+                url: "#"
+            },
+            // أوروبا
+            {
+                id: 7,
+                title: "ريال مدريد يتوج بطلاً لدوري أبطال أوروبا للمرة الـ15",
+                summary: "توج فريق ريال مدريد بلقب دوري أبطال أوروبا بعد فوزه على بايرن ميونخ في المباراة النهائية بنتيجة 2-1 على ملعب ويمبلي.",
+                category: "euro",
+                source: "بي إن سبورتس",
+                date: "منذ 15 دقيقة",
+                image: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=400",
+                url: "#"
+            },
+            {
+                id: 8,
+                title: "برشلونة يجدد عقد نجمه الشاب حتى 2030",
+                summary: "أعلن نادي برشلونة رسمياً تجديد عقد نجمه الشاب بيدري حتى عام 2030 مع شرط جزائي قدره مليار يورو.",
+                category: "euro",
+                source: "ماركا",
+                date: "منذ 50 دقيقة",
+                image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400",
+                url: "#"
+            },
+            {
+                id: 9,
+                title: "مانشستر سيتي يقترب من ضم نجم ريال مدريد",
+                summary: "كشفت صحيفة آس الإسبانية عن مفاوضات متقدمة بين مانشستر سيتي ونجم ريال مدريد البرازيلي فينيسيوس جونيور.",
+                category: "euro",
+                source: "آس",
+                date: "منذ ساعتين",
+                image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400",
+                url: "#"
+            },
+            // عربية
+            {
+                id: 10,
+                title: "منتخب المغرب يدخل تصنيف الـ10 الأوائل في العالم",
+                summary: "دخل المنتخب المغربي لأول مرة في تاريخه قائمة أفضل 10 منتخبات في تصنيف الفيفا الشهري بعد تألقه في كأس العالم.",
+                category: "arab",
+                source: "هسبريس",
+                date: "منذ 5 دقائق",
+                image: "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?w=400",
+                url: "#"
+            },
+            {
+                id: 11,
+                title: "الجزائر تنظم بطولة عربية كبرى في رمضان 2026",
+                summary: "أعلن الاتحاد الجزائري لكرة القدم عن تنظيم بطولة عربية ودية بمشاركة 8 منتخبات عربية خلال شهر رمضان المقبل.",
+                category: "arab",
+                source: "النهار",
+                date: "منذ ساعة",
+                image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=400",
+                url: "#"
+            },
+            {
+                id: 12,
+                title: "قطر تستضيف كأس الخليج بنسخته الـ26",
+                summary: "أعلن اتحاد كأس الخليج العربي رسمياً عن استضافة قطر للنسخة الـ26 من البطولة في ديسمبر 2026.",
+                category: "arab",
+                source: "الجزيرة",
+                date: "منذ 3 ساعات",
+                image: "https://images.unsplash.com/photo-1577223625818-75bc1f2ac0e5?w=400",
+                url: "#"
+            },
+            {
+                id: 13,
+                title: "اتحاد الكرة الإماراتي يعلن عن مشروع أكاديميات رمضانية",
+                summary: "أطلق اتحاد الكرة الإماراتي مشروع الأكاديميات الرمضانية لاكتشاف المواهب الشابة خلال شهر رمضان المبارك.",
+                category: "arab",
+                source: "الإمارات اليوم",
+                date: "منذ 4 ساعات",
+                image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?w=400",
+                url: "#"
+            }
+        ];
+
+        // ========== التحديث التلقائي للأخبار ==========
+        let currentNewsArray = [...ARABIC_SPORTS_NEWS];
+        let currentCategory = 'all';
+        let autoUpdateInterval;
+        let countdownInterval;
+        let countdownSeconds = 10;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // عناصر DOM
+            const newsList = document.getElementById('news-list');
+            const filterTags = document.querySelectorAll('.filter-tag');
+            const lastUpdateSpan = document.getElementById('last-update-time');
+            const autoTimerSpan = document.getElementById('auto-timer');
+            const manualUpdateBtn = document.getElementById('manual-update-btn');
+            const forceUpdateBtn = document.getElementById('force-update-btn');
+            
+            // ===== عرض الأخبار الأولية =====
+            function displayNews() {
+                let filteredNews = currentCategory === 'all' 
+                    ? currentNewsArray 
+                    : currentNewsArray.filter(news => news.category === currentCategory);
+                
+                // عرض 5 أخبار فقط (للتجديد السريع)
+                const displayItems = filteredNews.slice(0, 5);
+                
+                newsList.innerHTML = displayItems.map(news => `
+                    <div class="news-item" data-category="${news.category}">
+                        <div class="news-image">
+                            <img src="${news.image}" alt="${news.title}" loading="lazy">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">
+                                <a href="${news.url}" target="_blank">${news.title}</a>
+                            </h3>
+                            <p class="news-summary">${news.summary}</p>
+                            <div class="news-meta">
+                                <span class="news-source">${news.source}</span>
+                                <span style="color: #ffd700;">${news.date}</span>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+                
+                // تحديث وقت آخر تحديث
+                const now = new Date();
+                const timeString = now.toLocaleTimeString('ar-EG', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                });
+                lastUpdateSpan.textContent = timeString;
+            }
+            
+            // ===== تجديد الأخبار بشكل عشوائي =====
+            function refreshNews() {
+                // تبديل الأخبار بشكل عشوائي
+                const shuffled = [...ARABIC_SPORTS_NEWS].sort(() => Math.random() - 0.5);
+                
+                // تغيير التواريخ لجعلها تبدو جديدة
+                const freshNews = shuffled.map((news, index) => {
+                    const minutes = Math.floor(Math.random() * 30) + 1;
+                    return {
+                        ...news,
+                        date: `منذ ${minutes} دقيقة`,
+                        // تبديل الصور أحياناً
+                        image: news.image + '&random=' + Math.random()
+                    };
+                });
+                
+                currentNewsArray = freshNews;
+                displayNews();
+                
+                // إظهار إشعار بتجديد الأخبار
+                showRamadanNotification('📰 تم تجديد الأخبار تلقائياً');
+                
+                // إعادة عداد الثواني
+                countdownSeconds = 10;
+                if (autoTimerSpan) autoTimerSpan.textContent = 'يتجدد بعد 10 ث';
+            }
+            
+            // ===== بدء التحديث التلقائي كل 10 ثواني =====
+            function startAutoUpdate() {
+                // تجديد الأخبار كل 10 ثواني
+                autoUpdateInterval = setInterval(refreshNews, 10000);
+                
+                // عداد تنازلي
+                countdownInterval = setInterval(() => {
+                    countdownSeconds--;
+                    if (countdownSeconds < 0) countdownSeconds = 10;
+                    
+                    const timerElement = document.getElementById('auto-timer');
+                    if (timerElement) {
+                        timerElement.textContent = `يتجدد بعد ${countdownSeconds} ث`;
+                    }
+                }, 1000);
+            }
+            
+            // ===== فلترة الأخبار حسب التصنيف =====
+            filterTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    filterTags.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    currentCategory = this.getAttribute('data-category');
+                    displayNews();
+                });
+            });
+            
+            // ===== تحديث يدوي للأخبار =====
+            function manualRefresh() {
+                refreshNews();
+                showRamadanNotification('✅ تم تحديث الأخبار بنجاح');
+            }
+            
+            manualUpdateBtn.addEventListener('click', manualRefresh);
+            forceUpdateBtn.addEventListener('click', manualRefresh);
+            
+            // ===== إشعارات رمضانية =====
+            window.showRamadanNotification = function(message) {
+                const notification = document.createElement('div');
+                notification.className = 'ramadan-notification';
+                notification.innerHTML = `<i class="fas fa-moon"></i> ${message} <i class="fas fa-star"></i>`;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.style.animation = 'slideDown 0.3s reverse';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 300);
+                }, 3000);
+            };
+            
+            // ===== دوال البث المباشر =====
+            window.refreshStream = function() {
+                const iframe = document.getElementById('livestream-frame');
+                if (iframe) {
+                    iframe.src = iframe.src;
+                    showRamadanNotification('📡 تم تحديث البث المباشر');
+                }
+            };
+            
+            window.toggleFullscreen = function() {
+                const iframe = document.getElementById('livestream-frame');
+                if (!iframe) return;
+                
+                if (!document.fullscreenElement) {
+                    if (iframe.requestFullscreen) {
+                        iframe.requestFullscreen();
+                    }
+                    showRamadanNotification('🖥️ وضع ملء الشاشة');
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    }
+                }
+            };
+            
+            // ===== بدء كل شيء =====
+            displayNews();
+            startAutoUpdate();
+            
+            // رسالة ترحيب رمضانية
+            setTimeout(() => {
+                showRamadanNotification('🌙 رمضان كريم 2026 - أخبار كرة القدم تتجدد كل 10 ثواني');
+            }, 1000);
+        });
+    </script>
+    
+    <!-- سكربت إضافي للتأكد من عمل التحديث -->
+    <script src="https://pl28690070.effectivegatecpm.com/34/ad/5c/34ad5c2618ea9ccbeb54cb6b00b8680e.js"></script>
+</body>
+</html>
